@@ -18,6 +18,7 @@ spring:
     url: jdbc:mysql://dgline-mysql56.cx32n6vj7nb0.ap-northeast-2.rds.amazonaws.com:3306/cstech
     username: admin
     password: cstech!1873  
+    
 #    driver-class-name: oracle.jdbc.OracleDriver
 #    url: jdbc:oracle:thin:@192.168.0.101:1521:orcl
 #    username: prgmgtest
