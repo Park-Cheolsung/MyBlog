@@ -1,0 +1,41 @@
+server:
+  port: 8000
+  servlet:
+    context-path: /blog
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+      
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+     
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@192.168.0.101:1521:orcl
+    username: prgmgtest
+    password: 12345
+
+  jpa:
+#    open-in-view: true
+    hibernate:
+      ddl-auto: update
+#      ddl-auto: create
+      naming:
+#     repSeq -> REPSEQ 로 테이블 생성
+#     physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+#     repSeq -> REP_SEQ 로 테이블 생성
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+#      use-new-id-generator-mappings: false
+#    show-sql: true                                # SQL문을 로그에 찍도록 함
+#    properties:
+#      hibernate.format_sql: true        # SQL문을 일렬로 보여주지 않고 일반 형식으로 보여주게됨. 
+
+#  jackson:
+#    serialization:
+#      fail-on-empty-beans: false                
+
+  
